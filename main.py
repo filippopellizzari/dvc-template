@@ -2,10 +2,8 @@ import logging
 
 import pandas as pd
 import xgboost as xgb
-from dvclive.xgb import DVCLiveCallback
-from sklearn.model_selection import train_test_split
-
 from dvclive import Live
+from sklearn.model_selection import train_test_split
 
 
 def main() -> None:
@@ -27,13 +25,18 @@ def main() -> None:
     logging.info("Model training")
     with Live("custom_dir") as live:
         model = xgb.XGBClassifier(
+            random_state=0,
             n_estimators=50,
-            callbacks=[DVCLiveCallback()],
         )
 
         model.fit(X_train, y_train)
+        y_score = model.predict_proba(X_test)[:, 1]
+        y_pred = model.predict(X_test)
         accuracy = float(model.score(X_test, y_test))
         live.log_metric("accuracy", accuracy, plot=True)
+        live.log_sklearn_plot("calibration", y_test.values, y_score)
+        # live.log_sklearn_plot("roc", y_test.values, y_score)
+        live.log_sklearn_plot("confusion_matrix", y_test.values, y_pred, name="cm.json")
     logging.info("End")
 
 

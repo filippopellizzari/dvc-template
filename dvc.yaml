@@ -4,3 +4,21 @@ metrics:
 plots:
 - custom_dir/plots/metrics:
     x: step
+- custom_dir/plots/sklearn/calibration.json:
+    template: simple
+    x: prob_pred
+    y: prob_true
+    title: Calibration Curve
+    x_label: Mean Predicted Probability
+    y_label: Fraction of Positives
+- custom_dir/plots/sklearn/cm.json:
+    template: confusion
+    x: actual
+    y: predicted
+    title: Confusion Matrix
+    x_label: True Label
+    y_label: Predicted Label
+artifacts:
+  model:
+    path: model.pkl
+    type: model
