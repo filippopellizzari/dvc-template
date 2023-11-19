@@ -11,6 +11,11 @@ plots:
     title: Calibration Curve
     x_label: Mean Predicted Probability
     y_label: Fraction of Positives
+- custom_dir/plots/custom/precision_recall.json:
+    template: linear
+    x: recall
+    y: precision
+    title: Precision Recall plot
 - custom_dir/plots/sklearn/cm.json:
     template: confusion
     x: actual
