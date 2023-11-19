@@ -2,9 +2,10 @@ import logging
 
 import pandas as pd
 import xgboost as xgb
-from dvclive import Live
 from sklearn.metrics import precision_recall_curve
 from sklearn.model_selection import train_test_split
+
+from dvclive import Live
 
 
 def main() -> None:
@@ -19,8 +20,6 @@ def main() -> None:
     train, val = train_test_split(train, random_state=0, stratify=train["labels"])
     X_train = train.drop(columns=["labels"])
     y_train = train["labels"].values
-    X_val = val.drop(columns=["labels"])
-    y_val = val["labels"].values
     X_test = test.drop(columns=["labels"])
     y_test = test["labels"].values
     logging.info("Model training")
