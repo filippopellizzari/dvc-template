@@ -1,6 +1,7 @@
 metrics:
 - dvclive/metrics.json
 plots:
+- dvclive/plots/images
 - dvclive/plots/sklearn/calibration.json:
     template: simple
     x: prob_pred
@@ -13,6 +14,11 @@ plots:
     x: recall
     y: precision
     title: Precision Recall plot
+- dvclive/plots/custom/feature_importance.json:
+    template: bar_horizontal
+    x: importance
+    y: feature
+    title: Feature importance
 - dvclive/plots/sklearn/cm.json:
     template: confusion
     x: actual
