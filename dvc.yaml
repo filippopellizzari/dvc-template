@@ -1,5 +1,4 @@
 metrics:
-- dvclive/metrics.json
 - custom_dir/metrics.json
 plots:
 - custom_dir/plots/metrics:
