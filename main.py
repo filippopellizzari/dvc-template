@@ -24,7 +24,7 @@ def main() -> None:
     X_test = test.drop(columns=["labels"])
     y_test = test["labels"].values
     logging.info("Model training")
-    with Live("custom_dir") as live:
+    with Live(report="md") as live:
         model = xgb.XGBClassifier(
             random_state=0,
             n_estimators=200,
@@ -53,6 +53,7 @@ def main() -> None:
             title="Precision Recall plot",
         )
         live.log_sklearn_plot("confusion_matrix", y_test, y_pred, name="cm.json")
+        live.make_report()
     logging.info("End")
 
 

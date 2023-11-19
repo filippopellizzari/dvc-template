@@ -1,28 +1,24 @@
 metrics:
-- custom_dir/metrics.json
+- dvclive/metrics.json
 plots:
-- custom_dir/plots/metrics:
+- dvclive/plots/metrics:
     x: step
-- custom_dir/plots/sklearn/calibration.json:
+- dvclive/plots/sklearn/calibration.json:
     template: simple
     x: prob_pred
     y: prob_true
     title: Calibration Curve
     x_label: Mean Predicted Probability
     y_label: Fraction of Positives
-- custom_dir/plots/custom/precision_recall.json:
+- dvclive/plots/custom/precision_recall.json:
     template: linear
     x: recall
     y: precision
     title: Precision Recall plot
-- custom_dir/plots/sklearn/cm.json:
+- dvclive/plots/sklearn/cm.json:
     template: confusion
     x: actual
     y: predicted
     title: Confusion Matrix
     x_label: True Label
     y_label: Predicted Label
-artifacts:
-  model:
-    path: model.pkl
-    type: model
