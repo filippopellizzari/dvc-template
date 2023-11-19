@@ -34,7 +34,7 @@ def main() -> None:
         y_score = model.predict_proba(X_test)[:, 1]
         y_pred = model.predict(X_test)
         accuracy_test = float(model.score(X_test, y_test))
-        live.log_metric("accuracy:test", accuracy_test)
+        live.log_metric("accuracy:test", accuracy_test, plot=False)
         live.log_sklearn_plot("calibration", y_test, y_score)
 
         prec, recall, _ = precision_recall_curve(
