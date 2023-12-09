@@ -1,4 +1,4 @@
-# dvc-example
+# dvc-template
 
 Project template using DVC and Poetry.
 
@@ -39,4 +39,35 @@ git commit -m "My Experiment"
 git push
 ```
 
-Reference [guide](https://pages.github.com/](https://dvc.org/doc/user-guide)https://dvc.org/doc/user-guide)
+Reference [guide](https://dvc.org/doc/user-guide)
+
+## Poetry
+
+Poetry is a dependency management and packaging tool for Python. It simplifies the process of managing project dependencies and packaging by providing a single tool to handle both tasks. Poetry is often used in Python projects to manage project dependencies, create virtual environments, and package Python applications.
+
+Key features:
+
+- **Dependency Management**: Poetry uses a simple and intuitive *pyproject.toml* file to define project metadata, dependencies, and other settings. This file replaces the traditional *requirements.txt* and *setup.py* files.
+
+- **Dependency Resolution**: Poetry automatically resolves and installs dependencies, making it easier to manage complex dependency trees. It uses a lock file (*poetry.lock*) to ensure that dependencies are installed with the exact versions specified.
+
+- **Virtual Environments**: Poetry automatically creates and manages virtual environments for your projects. This helps isolate project dependencies, ensuring that your project's dependencies don't interfere with the global Python environment.
+
+Quick start:
+1. Create pyproject and virtual env
+```
+poetry init
+```
+2. Activate virtual env
+```
+poetry shell
+```
+3. Add package to virtual env
+```
+poetry add {mypackage}
+```
+4. Exit virtual env
+```
+Deactivate
+```
+Reference [guide](https://python-poetry.org/docs/basic-usage/)
