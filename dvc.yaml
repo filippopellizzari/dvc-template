@@ -26,3 +26,33 @@ plots:
     title: Confusion Matrix
     x_label: True Label
     y_label: Predicted Label
+stages:
+  prepare:
+    cmd: python 00_data_preparation.py
+    deps:
+    - 00_data_preparation.py
+    - data/Train.csv
+    outs:
+    - data/dataset/X_train.parquet
+    - data/dataset/y_train.parquet
+    - data/dataset/X_val.parquet
+    - data/dataset/y_val.parquet
+    - data/dataset/X_test.parquet
+    - data/dataset/y_test.parquet
+  train:
+    cmd: python 01_training.py
+    deps:
+    - 01_training.py
+    - data/dataset/X_train.parquet
+    - data/dataset/y_train.parquet
+    - data/dataset/X_val.parquet
+    - data/dataset/y_val.parquet
+    outs:
+    - models/model.json
+  evaluate:
+    cmd: python 02_evaluation.py
+    deps:
+    - 02_evaluation.py
+    - models/model.json
+    - data/dataset/X_test.parquet
+    - data/dataset/y_test.parquet
