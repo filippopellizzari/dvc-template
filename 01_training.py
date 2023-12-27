@@ -19,7 +19,7 @@ def main() -> None:
     logging.info("Training")
     model = xgb.XGBClassifier(
         random_state=0,
-        n_estimators=200,
+        n_estimators=50,
         early_stopping_rounds=20,
     )
 
