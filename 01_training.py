@@ -1,9 +1,10 @@
 import logging
-import pathlib
 
 import dvc.api
 import pandas as pd
 import xgboost as xgb
+
+from dvclive import Live
 
 
 def main() -> None:
@@ -24,6 +25,14 @@ def main() -> None:
 
     model.fit(X_train, y_train, eval_set=[(X_val, y_val)], verbose=False)
     model.save_model("model.json")
+    with Live() as live:
+        live.log_artifact(
+            "model.json",
+            type="model",
+            name="mymodel",
+            desc="XGBoost",
+            labels=["xgboost"],
+        )
     logging.info("End")
 
 

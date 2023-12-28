@@ -1,31 +1,3 @@
-metrics:
-- dvclive/metrics.json
-plots:
-- dvclive/plots/images
-- dvclive/plots/sklearn/calibration.json:
-    template: simple
-    x: prob_pred
-    y: prob_true
-    title: Calibration Curve
-    x_label: Mean Predicted Probability
-    y_label: Fraction of Positives
-- dvclive/plots/custom/precision_recall.json:
-    template: linear
-    x: recall
-    y: precision
-    title: Precision Recall plot
-- dvclive/plots/custom/feature_importance.json:
-    template: bar_horizontal
-    x: importance
-    y: feature
-    title: Feature importance
-- dvclive/plots/sklearn/cm.json:
-    template: confusion
-    x: actual
-    y: predicted
-    title: Confusion Matrix
-    x_label: True Label
-    y_label: Predicted Label
 stages:
   prepare:
     cmd: python 00_data_preparation.py
@@ -64,3 +36,35 @@ stages:
     - model.json
     - data/dataset/X_test.parquet
     - data/dataset/y_test.parquet
+artifacts:
+  mymodel:
+    path: model.json
+    type: model
+    desc: XGBoost
+    labels:
+    - xgboost
+metrics:
+- dvclive/metrics.json
+plots:
+- dvclive/plots/images
+- dvclive/plots/sklearn/calibration.json:
+    template: simple
+    x: prob_pred
+    y: prob_true
+    title: Calibration Curve
+    x_label: Mean Predicted Probability
+    y_label: Fraction of Positives
+- dvclive/plots/sklearn/precision_recall.json:
+    template: simple
+    x: recall
+    y: precision
+    title: Precision-Recall Curve
+    x_label: Recall
+    y_label: Precision
+- dvclive/plots/sklearn/cm.json:
+    template: confusion
+    x: actual
+    y: predicted
+    title: Confusion Matrix
+    x_label: True Label
+    y_label: Predicted Label
