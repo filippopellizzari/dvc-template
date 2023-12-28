@@ -3,6 +3,7 @@ import logging
 import optuna
 import pandas as pd
 import xgboost as xgb
+import yaml
 from sklearn.metrics import roc_auc_score
 
 
@@ -52,9 +53,12 @@ def main() -> None:
     X_val = pd.read_parquet("data/dataset/X_val.parquet")
     y_val = pd.read_parquet("data/dataset/y_val.parquet")
     logging.info("Tuning")
-    tuning = Tuning(10, X_train, y_train, X_val, y_val)
+    tuning = Tuning(50, X_train, y_train, X_val, y_val)
     best_params = tuning.compute()
-    print(best_params)
+    logging.info(f"{best_params=}")
+    with open("params.yaml", "w") as f:
+        yaml.dump(best_params, f)
+
     logging.info("End")
 
 

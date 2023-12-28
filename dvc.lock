@@ -61,18 +61,18 @@ stages:
       size: 40063
     params:
       params.yaml:
-        colsample_bytree: 0.5
-        early_stopping_rounds: 11
-        learning_rate: 0.044
+        colsample_bytree: 0.9446323890344401
+        early_stopping_rounds: 19
+        learning_rate: 0.043658771893526016
         max_depth: 9
-        min_child_weight: 1
-        n_estimators: 188
-        subsample: 0.44
+        min_child_weight: 10
+        n_estimators: 158
+        subsample: 0.7451823802762608
     outs:
     - path: model.json
       hash: md5
-      md5: 18f654de689ac64919d40de52460c847
-      size: 2471664
+      md5: f32ab7704392a85e235d86f9af09aa41
+      size: 1024160
   evaluate:
     cmd: python 02_evaluation.py
     deps:
@@ -90,5 +90,5 @@ stages:
       size: 53693
     - path: model.json
       hash: md5
-      md5: 18f654de689ac64919d40de52460c847
-      size: 2471664
+      md5: f32ab7704392a85e235d86f9af09aa41
+      size: 1024160
