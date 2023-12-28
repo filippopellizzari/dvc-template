@@ -25,7 +25,7 @@ class Tuning:
             "colsample_bytree": trial.suggest_float("colsample_bytree", 0.05, 1.0),
             "min_child_weight": trial.suggest_int("min_child_weight", 1, 20),
         }
-        model = xgb.XGBClassifier(random_state=0, **params)
+        model = xgb.XGBClassifier(random_state=42, **params)
         model.fit(
             self.X_train,
             self.y_train,
@@ -55,6 +55,7 @@ def main() -> None:
     logging.info("Tuning")
     tuning = Tuning(50, X_train, y_train, X_val, y_val)
     best_params = tuning.compute()
+    best_params["random_state"] = 42
     logging.info(f"{best_params=}")
     with open("params.yaml", "w") as f:
         yaml.dump(best_params, f)

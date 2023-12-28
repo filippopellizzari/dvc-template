@@ -41,8 +41,8 @@ stages:
     deps:
     - path: 01_training.py
       hash: md5
-      md5: 08f012da0d09c78b87fb618627ae629a
-      size: 1037
+      md5: 93e4afd970de70f126ae4fa94e2e1198
+      size: 988
     - path: data/dataset/X_train.parquet
       hash: md5
       md5: 0f518c1296f8b60d6f63c51907a24da6
@@ -61,18 +61,18 @@ stages:
       size: 40063
     params:
       params.yaml:
-        colsample_bytree: 0.9446323890344401
-        early_stopping_rounds: 19
-        learning_rate: 0.043658771893526016
-        max_depth: 9
-        min_child_weight: 10
-        n_estimators: 158
-        subsample: 0.7451823802762608
+        colsample_bytree: 0.5899891961399993
+        early_stopping_rounds: 15
+        learning_rate: 0.06519967442047679
+        max_depth: 5
+        min_child_weight: 3
+        n_estimators: 183
+        subsample: 0.9526677078382316
     outs:
     - path: model.json
       hash: md5
-      md5: f32ab7704392a85e235d86f9af09aa41
-      size: 1024160
+      md5: aa84b56906ac7c274e37c012db2d5768
+      size: 568845
   evaluate:
     cmd: python 02_evaluation.py
     deps:
@@ -90,5 +90,5 @@ stages:
       size: 53693
     - path: model.json
       hash: md5
-      md5: f32ab7704392a85e235d86f9af09aa41
-      size: 1024160
+      md5: aa84b56906ac7c274e37c012db2d5768
+      size: 568845

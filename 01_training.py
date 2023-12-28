@@ -21,7 +21,7 @@ def main() -> None:
     params = dvc.api.params_show()
 
     logging.info("Training")
-    model = xgb.XGBClassifier(random_state=0, **params)
+    model = xgb.XGBClassifier(**params)
 
     model.fit(X_train, y_train, eval_set=[(X_val, y_val)], verbose=False)
     model.save_model("model.json")
@@ -33,8 +33,6 @@ def main() -> None:
             desc="XGBoost",
             labels=["xgboost"],
         )
-
-        live.log_params(params)
     logging.info("End")
 
 
