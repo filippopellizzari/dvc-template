@@ -1,3 +1,5 @@
+[![DVC](https://img.shields.io/badge/-Open_in_Studio-grey.svg?style=flat-square&logo=dvc)](https://studio.iterative.ai/user/filippopellizzari/projects/dvc-template-45ssodv0e4)
+
 # dvc-template
 
 Project template using DVC and Poetry.
