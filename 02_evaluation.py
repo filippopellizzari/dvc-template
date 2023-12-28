@@ -17,7 +17,7 @@ def main() -> None:
     X_test = pd.read_parquet("data/dataset/X_test.parquet")
     y_test = pd.read_parquet("data/dataset/y_test.parquet")
     model = xgb.XGBClassifier()
-    model.load_model("models/model.json")
+    model.load_model("model.json")
     logging.info("Evaluation")
     with Live() as live:
         y_score = model.predict_proba(X_test)[:, 1]

@@ -23,8 +23,7 @@ def main() -> None:
     model = xgb.XGBClassifier(random_state=0, **params)
 
     model.fit(X_train, y_train, eval_set=[(X_val, y_val)], verbose=False)
-    pathlib.Path("models").mkdir(parents=True, exist_ok=True)
-    model.save_model("models/model.json")
+    model.save_model("model.json")
     logging.info("End")
 
 

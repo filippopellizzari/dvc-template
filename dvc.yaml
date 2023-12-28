@@ -56,11 +56,11 @@ stages:
     - colsample_bytree
     - min_child_weight
     outs:
-    - models/model.json
+    - model.json
   evaluate:
     cmd: python 02_evaluation.py
     deps:
     - 02_evaluation.py
-    - models/model.json
+    - model.json
     - data/dataset/X_test.parquet
     - data/dataset/y_test.parquet
