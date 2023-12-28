@@ -61,6 +61,13 @@ plots:
     title: Precision-Recall Curve
     x_label: Recall
     y_label: Precision
+- dvclive/plots/sklearn/roc.json:
+    template: simple
+    x: fpr
+    y: tpr
+    title: Receiver operating characteristic (ROC)
+    x_label: False Positive Rate
+    y_label: True Positive Rate
 - dvclive/plots/sklearn/cm.json:
     template: confusion
     x: actual

@@ -78,8 +78,8 @@ stages:
     deps:
     - path: 02_evaluation.py
       hash: md5
-      md5: 464d942fe16b7074a6e51e07c7c5405e
-      size: 2014
+      md5: 5dec30c7486035c426b716686f2ee106
+      size: 1660
     - path: data/dataset/X_test.parquet
       hash: md5
       md5: 7c1389dcd5d85f1f13460ecbc8b21c9f

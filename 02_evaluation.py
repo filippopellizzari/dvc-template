@@ -15,42 +15,31 @@ def main() -> None:
     )
     logging.info("Start")
     X_test = pd.read_parquet("data/dataset/X_test.parquet")
-    y_test = pd.read_parquet("data/dataset/y_test.parquet")
+    y_test = pd.read_parquet("data/dataset/y_test.parquet").values.tolist()
     model = xgb.XGBClassifier()
     model.load_model("model.json")
     logging.info("Evaluation")
+    y_score = model.predict_proba(X_test)[:, 1].tolist()
+    y_pred = model.predict(X_test)
+    accuracy_test = float(model.score(X_test, y_test))
+    roc_auc_test = float(roc_auc_score(y_test, y_score))
     with Live() as live:
-        y_score = model.predict_proba(X_test)[:, 1].tolist()
-        y_pred = model.predict(X_test)
-        accuracy_test = float(model.score(X_test, y_test))
-        roc_auc_test = float(roc_auc_score(y_test, y_score))
         live.log_metric("accuracy:test", accuracy_test, plot=False)
         live.log_metric("roc_auc:test", roc_auc_test, plot=False)
+        # calibration plot
         live.log_sklearn_plot("calibration", y_test, y_score)
-
-        """
-        prec, recall, _ = precision_recall_curve(
-            y_test, y_score, pos_label=model.classes_[1]
-        )
-        prec_recall_dict = pd.DataFrame({"precision": prec, "recall": recall}).to_dict(
-            "records"
-        )
-        live.log_plot(
-            "precision_recall",
-            prec_recall_dict,
-            x="recall",
-            y="precision",
-            template="linear",
-            title="Precision Recall plot",
-        )
-        """
+        # precision recall plot
         live.log_sklearn_plot(
             "precision_recall",
-            y_test.values.tolist(),
+            y_test,
             y_score,
-            # drop_intermediate=True,
         )
-
+        # roc auc plot
+        live.log_sklearn_plot(
+            "roc",
+            y_test,
+            y_score,
+        )
         # feature importance
         fig, _ = plt.subplots()
         xgb.plot_importance(model)
