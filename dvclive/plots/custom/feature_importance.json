@@ -1,66 +1,66 @@
 [
     {
         "feature": "feature_15",
-        "importance": 0.2730015814304352
+        "importance": 0.20834189653396606
     },
     {
         "feature": "feature_3",
-        "importance": 0.13889853656291962
+        "importance": 0.11771660298109055
     },
     {
         "feature": "feature_13",
-        "importance": 0.10755304992198944
+        "importance": 0.10485588014125824
     },
     {
         "feature": "feature_11",
-        "importance": 0.09571809321641922
-    },
-    {
-        "feature": "feature_5",
-        "importance": 0.06333696097135544
+        "importance": 0.08619765937328339
     },
     {
         "feature": "feature_14",
-        "importance": 0.049475256353616714
+        "importance": 0.06586451083421707
+    },
+    {
+        "feature": "feature_5",
+        "importance": 0.05892021209001541
     },
     {
         "feature": "feature_12",
-        "importance": 0.04603966325521469
-    },
-    {
-        "feature": "feature_0",
-        "importance": 0.03447363153100014
-    },
-    {
-        "feature": "feature_8",
-        "importance": 0.026992961764335632
-    },
-    {
-        "feature": "feature_2",
-        "importance": 0.026133215054869652
-    },
-    {
-        "feature": "feature_4",
-        "importance": 0.025203879922628403
-    },
-    {
-        "feature": "feature_9",
-        "importance": 0.024678997695446014
-    },
-    {
-        "feature": "feature_1",
-        "importance": 0.022686799988150597
-    },
-    {
-        "feature": "feature_10",
-        "importance": 0.022624967619776726
+        "importance": 0.04578650742769241
     },
     {
         "feature": "feature_6",
-        "importance": 0.022096483036875725
+        "importance": 0.04316965118050575
+    },
+    {
+        "feature": "feature_0",
+        "importance": 0.03714090213179588
+    },
+    {
+        "feature": "feature_10",
+        "importance": 0.036240529268980026
+    },
+    {
+        "feature": "feature_2",
+        "importance": 0.035742342472076416
+    },
+    {
+        "feature": "feature_1",
+        "importance": 0.03507579118013382
+    },
+    {
+        "feature": "feature_8",
+        "importance": 0.03479992598295212
+    },
+    {
+        "feature": "feature_4",
+        "importance": 0.030436404049396515
     },
     {
         "feature": "feature_7",
-        "importance": 0.02108590304851532
+        "importance": 0.030245499685406685
+    },
+    {
+        "feature": "feature_9",
+        "importance": 0.029465697705745697
     }
 ]

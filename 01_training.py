@@ -1,6 +1,7 @@
 import logging
 import pathlib
 
+import dvc.api
 import pandas as pd
 import xgboost as xgb
 
@@ -16,12 +17,10 @@ def main() -> None:
     X_val = pd.read_parquet("data/dataset/X_val.parquet")
     y_val = pd.read_parquet("data/dataset/y_val.parquet")
 
+    params = dvc.api.params_show()
+
     logging.info("Training")
-    model = xgb.XGBClassifier(
-        random_state=0,
-        n_estimators=50,
-        early_stopping_rounds=20,
-    )
+    model = xgb.XGBClassifier(random_state=0, **params)
 
     model.fit(X_train, y_train, eval_set=[(X_val, y_val)], verbose=False)
     pathlib.Path("models").mkdir(parents=True, exist_ok=True)

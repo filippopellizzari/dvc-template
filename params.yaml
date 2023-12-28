@@ -1,0 +1,7 @@
+n_estimators: 188
+early_stopping_rounds: 11
+learning_rate: 0.044
+max_depth: 9
+subsample: 0.44
+colsample_bytree: 0.50
+min_child_weight: 1

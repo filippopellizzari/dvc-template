@@ -47,6 +47,14 @@ stages:
     - data/dataset/y_train.parquet
     - data/dataset/X_val.parquet
     - data/dataset/y_val.parquet
+    params:
+    - n_estimators
+    - early_stopping_rounds
+    - learning_rate
+    - max_depth
+    - subsample
+    - colsample_bytree
+    - min_child_weight
     outs:
     - models/model.json
   evaluate:
