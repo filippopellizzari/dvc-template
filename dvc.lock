@@ -41,8 +41,8 @@ stages:
     deps:
     - path: 01_training.py
       hash: md5
-      md5: 1dd97ccdb4aa5635a3a14fce38233579
-      size: 1004
+      md5: 08f012da0d09c78b87fb618627ae629a
+      size: 1037
     - path: data/dataset/X_train.parquet
       hash: md5
       md5: 0f518c1296f8b60d6f63c51907a24da6

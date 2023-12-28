@@ -33,6 +33,8 @@ def main() -> None:
             desc="XGBoost",
             labels=["xgboost"],
         )
+
+        live.log_params(params)
     logging.info("End")
 
 
