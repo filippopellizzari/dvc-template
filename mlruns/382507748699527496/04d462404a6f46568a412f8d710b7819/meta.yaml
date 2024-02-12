@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/382507748699527496/04d462404a6f46568a412f8d710b7819/artifacts
+end_time: 1707734935730
+entry_point_name: ''
+experiment_id: '382507748699527496'
+lifecycle_stage: active
+run_id: 04d462404a6f46568a412f8d710b7819
+run_name: honorable-snail-821
+run_uuid: 04d462404a6f46568a412f8d710b7819
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707734926983
+status: 3
+tags: []
+user_id: filippopellizzari

@@ -64,22 +64,22 @@ stages:
         colsample_bytree: 0.5899891961399993
         early_stopping_rounds: 15
         learning_rate: 0.06519967442047679
-        max_depth: 5
+        max_depth: 12
         min_child_weight: 3
         n_estimators: 183
         subsample: 0.9526677078382316
     outs:
     - path: model.json
       hash: md5
-      md5: aa84b56906ac7c274e37c012db2d5768
-      size: 568845
+      md5: 93576210224a0bd9bb513c78d5552e54
+      size: 2656693
   evaluate:
     cmd: python 02_evaluation.py
     deps:
     - path: 02_evaluation.py
       hash: md5
-      md5: 5dec30c7486035c426b716686f2ee106
-      size: 1660
+      md5: 7f962cabb593ef9ad1dd30e2cb42f228
+      size: 2376
     - path: data/dataset/X_test.parquet
       hash: md5
       md5: 7c1389dcd5d85f1f13460ecbc8b21c9f
@@ -90,5 +90,5 @@ stages:
       size: 53693
     - path: model.json
       hash: md5
-      md5: aa84b56906ac7c274e37c012db2d5768
-      size: 568845
+      md5: 93576210224a0bd9bb513c78d5552e54
+      size: 2656693

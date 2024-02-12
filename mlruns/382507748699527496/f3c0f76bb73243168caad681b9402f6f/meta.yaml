@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/382507748699527496/f3c0f76bb73243168caad681b9402f6f/artifacts
+end_time: 1707734365479
+entry_point_name: ''
+experiment_id: '382507748699527496'
+lifecycle_stage: active
+run_id: f3c0f76bb73243168caad681b9402f6f
+run_name: rumbling-moose-677
+run_uuid: f3c0f76bb73243168caad681b9402f6f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707734365295
+status: 3
+tags: []
+user_id: filippopellizzari

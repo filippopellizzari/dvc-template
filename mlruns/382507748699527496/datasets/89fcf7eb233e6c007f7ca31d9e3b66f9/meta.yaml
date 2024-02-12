@@ -1,0 +1,18 @@
+digest: e574cbe5
+name: dataset
+profile: '{"num_rows": 8477, "num_elements": 135632}'
+schema: '{"mlflow_colspec": [{"type": "double", "name": "feature_0", "required": true},
+  {"type": "double", "name": "feature_1", "required": true}, {"type": "double", "name":
+  "feature_2", "required": true}, {"type": "double", "name": "feature_3", "required":
+  true}, {"type": "double", "name": "feature_4", "required": true}, {"type": "double",
+  "name": "feature_5", "required": true}, {"type": "double", "name": "feature_6",
+  "required": true}, {"type": "long", "name": "feature_7", "required": true}, {"type":
+  "long", "name": "feature_8", "required": true}, {"type": "long", "name": "feature_9",
+  "required": true}, {"type": "long", "name": "feature_10", "required": true}, {"type":
+  "long", "name": "feature_11", "required": true}, {"type": "long", "name": "feature_12",
+  "required": true}, {"type": "long", "name": "feature_13", "required": true}, {"type":
+  "long", "name": "feature_14", "required": true}, {"type": "long", "name": "feature_15",
+  "required": true}]}'
+source: '{"tags": {"mlflow.user": "filippopellizzari", "mlflow.source.name": "02_evaluation.py",
+  "mlflow.source.type": "LOCAL", "mlflow.source.git.commit": "43d593ca7cb8295774e1e7fe90de73d1437b7b94"}}'
+source_type: code

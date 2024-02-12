@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/382507748699527496/e860cfb49fe94c50bd26936998a4cbc5/artifacts
+end_time: 1707733700418
+entry_point_name: ''
+experiment_id: '382507748699527496'
+lifecycle_stage: active
+run_id: e860cfb49fe94c50bd26936998a4cbc5
+run_name: calm-ox-304
+run_uuid: e860cfb49fe94c50bd26936998a4cbc5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707733700356
+status: 3
+tags: []
+user_id: filippopellizzari

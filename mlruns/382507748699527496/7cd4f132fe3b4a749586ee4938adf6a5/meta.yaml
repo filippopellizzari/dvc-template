@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/382507748699527496/7cd4f132fe3b4a749586ee4938adf6a5/artifacts
+end_time: 1707734600400
+entry_point_name: ''
+experiment_id: '382507748699527496'
+lifecycle_stage: active
+run_id: 7cd4f132fe3b4a749586ee4938adf6a5
+run_name: bittersweet-mink-430
+run_uuid: 7cd4f132fe3b4a749586ee4938adf6a5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707734593682
+status: 3
+tags: []
+user_id: filippopellizzari

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/382507748699527496/549722a293d643c886c2fb74e826aa3c/artifacts
+end_time: 1707733779030
+entry_point_name: ''
+experiment_id: '382507748699527496'
+lifecycle_stage: active
+run_id: 549722a293d643c886c2fb74e826aa3c
+run_name: nebulous-wolf-462
+run_uuid: 549722a293d643c886c2fb74e826aa3c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707733778950
+status: 3
+tags: []
+user_id: filippopellizzari
