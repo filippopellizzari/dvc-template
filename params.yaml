@@ -1,7 +1,7 @@
 colsample_bytree: 0.5899891961399993
 early_stopping_rounds: 15
 learning_rate: 0.06519967442047679
-max_depth: 12
+max_depth: 11
 min_child_weight: 3
 n_estimators: 183
 random_state: 42

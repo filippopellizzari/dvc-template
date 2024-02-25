@@ -51,6 +51,7 @@ def main() -> None:
         # confusion matrix
         live.log_sklearn_plot("confusion_matrix", y_test, y_pred, name="cm.json")
 
+    """
     logging.info("MLFlow")
     mlflow.set_tracking_uri(uri="http://127.0.0.1:8080")
     mlflow.set_experiment("MLflow Quickstart")
@@ -64,6 +65,7 @@ def main() -> None:
         model_info = mlflow.xgboost.log_model(model, "classifier", signature=signature)
         mlflow.log_input(test_set, context="testing")
         mlflow.log_figure(fig, "feature_importance.png")
+    """
 
     logging.info("End")
 
